@@ -158,10 +158,10 @@ function main(game){
     }if(game.inProgress==true){
         game.found==false
         getScore(game_id);
-        console.log("inProg")
+        console.log("inScoreCheck")
     }
 
-    console.log("inProg")
+    console.log("exitingMain")
     return;
 }
 
