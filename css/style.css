@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+ 
+* {
+    margin: 0px;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../images/background-light.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 90px;
+    color: #FFF;
+}
+
+h1 { font-size: 200px;
+     margin: 0px;}
+p {
+    padding: auto;
+}
+span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    grid-gap: 50px;
+    justify-content: space-between;
+    
+  }
+
+
+  .grid-item {
+
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+  }
+  .score {
+    grid-column: span 1;
+    grid-row: 2;
+    font-size: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    
+  }
+  #homeScore {
+    display: block;
+    padding: auto;
+    line-height: normal;
+
+
+  }
+  .timer {
+
+    
+    grid-column: span 1;
+    grid-row: 2;
+    font-size: 100px;
+    align-items: center;
+    display: inline-block;
+  }
+  #timer {
+      vertical-align:bottom;
+      font-size: 150px;
+  }
+
+  #awayScore, #homeScore {
+      font-size: 400px
+  }
+  .countdown {
+    grid-column: span 3;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home {
+    grid-column: span 3;
+    grid-row: 1;
+  }
+  .away {
+    grid-column: 5 / 8;
+    grid-row: 1;
+  }
+
+
+  
+  .teamLogo {
+    grid-column: span 2;
+    grid-row: 2 / 4;
+    /* background-image: url("../images/logos/29.svg"); */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    background-size: contain;
+    background-position: center; 
+    position: relative;
+    /* background-size: cover; */
+  }
+  .awayLogo {
+    /* background-image: url("../images/logos/29.svg"); */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    background-size: contain;
+    background-position: center; 
+    position: relative;
+    /* vertical-align: middle; */
+  }
+
