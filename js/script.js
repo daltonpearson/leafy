@@ -99,10 +99,14 @@ function countdown(countDownDate){
 
     // Get todays date and time
     var now = new Date().getTime();
-  
+    
     // Find the distance between now and the count down date
     var distance = game.nextGameStart - now;
     //distance = 0;
+    if (distance < 0){
+        return
+        //monitorGame(game.nextGameID);
+    }
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -146,7 +150,7 @@ function drawScore(){
 function main(game){
     if(game.inProgress==false && game.found==false){
         
-        var game_id = getNextGameID(10);
+        game_id = getNextGameID(10);
         
         var distance = getGame(game_id);
         getScore(game_id);
@@ -156,7 +160,8 @@ function main(game){
         getScore(game_id);
         console.log("inProg")
     }
-    setTimeout(100000)
+
+    console.log("inProg")
     return;
 }
 
