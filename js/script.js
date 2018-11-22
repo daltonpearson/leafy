@@ -104,8 +104,7 @@ function countdown(countDownDate){
     var distance = game.nextGameStart - now;
     //distance = 0;
     if (distance < 0){
-        return
-        //monitorGame(game.nextGameID);
+        distance=0;
     }
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -155,12 +154,14 @@ function main(game){
         var distance = getGame(game_id);
         getScore(game_id);
         game.found = true;
+        console.log("inGetGame")
     }if(game.inProgress==true){
         game.found==false
         getScore(game_id);
         console.log("inScoreCheck")
     }
 
+    console.log(game.inProgress)
     console.log("exitingMain")
     return;
 }
