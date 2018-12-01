@@ -82,13 +82,13 @@ function getScore(gameID){
 
         if(json["currentPeriodTimeRemaining"] == "Final" || json["currentPeriod"] == 0){
             time = "0.0";
-            period = "Period"
+            period = ""
         }
         
         document.getElementById("homeScore").innerHTML = homeScore;
         document.getElementById("awayScore").innerHTML = awayScore;
-        document.getElementById("period").innerHTML = period;
-        document.getElementById("timer").innerHTML = time;
+        //document.getElementById("period").innerHTML = period;
+        document.getElementById("timer").innerHTML = period;
         if(json["currentPeriodTimeRemaining"]=="Final"){
             game.inProgress == false;
         }
