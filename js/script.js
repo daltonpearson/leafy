@@ -147,10 +147,9 @@ function drawScore(){
 }
 
 function main(game){
-    if(game.inProgress==false && game.found==false){
+    if(game.inProgress==false){
         
-        game_id = getNextGameID(10);
-        
+        game_id = getNextGameID(10);       
         var distance = getGame(game_id);
         getScore(game_id);
         game.found = true;
@@ -179,4 +178,5 @@ getScore(game_id);
 
 
 
+var main_id = setInterval(function(){main(game)}, 1000);
 var main_id = setInterval(function(){main(game)}, 1000);
