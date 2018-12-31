@@ -180,4 +180,5 @@ getScore(game_id);
 
 
 var main_id = setInterval(function(){main(game)}, 1000);
+var refresh_id = setInterval(function(){document.location.reload()}, 3600000);
 //var main_id = setInterval(function(){main(game)}, 1000);
