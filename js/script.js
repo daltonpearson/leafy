@@ -180,4 +180,4 @@ getScore(game_id);
 
 
 var main_id = setInterval(function(){main(game)}, 1000);
-var main_id = setInterval(function(){main(game)}, 1000);
+//var main_id = setInterval(function(){main(game)}, 1000);
