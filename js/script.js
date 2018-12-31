@@ -25,8 +25,8 @@ function getNextGameID(teamID){
         var nextGameID = nextGame["gamePk"];
         
         game.nextGameID = nextGameID;
-    
-    
+        
+        
     }
 
 
@@ -147,9 +147,10 @@ function drawScore(){
 }
 
 function main(game){
-    if(game.inProgress==false){
+    if(game.inProgress==false && game.found==false){
         
-        game_id = getNextGameID(10);       
+        game_id = getNextGameID(10);
+        
         var distance = getGame(game_id);
         getScore(game_id);
         game.found = true;
